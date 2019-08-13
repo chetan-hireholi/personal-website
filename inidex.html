@@ -1,0 +1,183 @@
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Lato:400|Sansita+One);
+
+    :root {
+        --primary-color: #302AE6;
+        --secondary-color: #536390;
+        --font-color: #424242;
+        --bg-color: #fff;
+        --heading-color: #292922;
+    }
+
+    [data-theme="dark"] {
+        --primary-color: #9A97F3;
+        --secondary-color: #818cab;
+        --font-color: #e1e1ff;
+        --bg-color: #161625;
+        --heading-color: #818cab;
+    }
+
+    body {
+        font-family: "Helvetica Neue", Helvetica;
+        background-color: var(--bg-color);
+        color: var(--font-color);
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: var(--heading-color);
+        font-family: "Helvetica Neue", Helvetica;
+        font-size: 2.5rem;
+        margin-bottom: 1vh;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+    }
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            border-bottom: 3px solid currentColor;
+        }
+    }
+
+    section {
+        max-width: 68%;
+        margin: 0 auto;
+    }
+
+    .post-meta {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 4vh;
+        color: var(--secondary-color);
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 0;
+    }
+
+    /*slider switch css */
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+
+        em {
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+    }
+
+    .theme-switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+    }
+
+    .theme-switch input {
+        display: none;
+    }
+
+    .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: .4s;
+    }
+
+    .slider:before {
+        background-color: #fff;
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        transition: .4s;
+        width: 26px;
+    }
+
+    input:checked+.slider {
+        background-color: #66bb6a;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(26px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<nav>
+    <div class="theme-switch-wrapper">
+        <em style="font-style: normal;letter-spacing: 0.500em;font-size: 25px;">🌗</em>
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+</nav>
+<title>Chetan Hireholi</title>
+<section>
+    <article class="post">
+        <h1>Hi! I’m Chetan Hireholi.</h1>
+        <h3>My life summed up - 👨‍💻 📸 🕹 🐕 🍕</h3>
+        <!-- <h3>My life summed up U+1F468 📸 🕹 🐕 🍕</h3> -->
+        <p>I’m currently working as a Software Engineer in a DevOps team of Philips Healthcare since 2016. I’m involved
+            in a
+            multi facet role: programming, designing & mentoring.</p>
+        <br>
+        <h3>In my past time...</h3>
+        <p>- I write some stuffs <a href="https://medium.com/@chetan_hireholi" target="_blank">here</a>.</p>
+        <p>- Since I have a desk job, I like to go outside and click pictures. You can find ‘em <a
+                href="https://unsplash.com/@tranquilhuman" target="_blank">here</a> and <a
+                href="https://www.instagram.com/tranquilhuman/" target="_blank">here</a>.</p>
+        <br>
+        <h3><a href="https://github.com/chetan-hireholi/personal-website/raw/master/Chetan_Hireholi_CV.pdf">My resume</a>.</h3>   
+        <h3><a href="mailto: chetan.hireholi@gmail.com">Contact me</a>.</h3>
+    </article>
+</section>
+<script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
