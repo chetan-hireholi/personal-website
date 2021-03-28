@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
     @import url(https://fonts.googleapis.com/css?family=Lato:400|Sansita+One);
 
     :root {
@@ -142,7 +142,6 @@
     <article class="post">
         <h1>Hi! I’m Chetan Hireholi.</h1>
         <h3 style="line-height: 2;">My life summed up - 👨‍💻 📸 🕹 🐕 🍕</h3>
-        <!-- <h3>My life summed up U+1F468 📸 🕹 🐕 🍕</h3> -->
         <p style="line-height: 1.5;">Passionate learner. Tech enthusiast. Pizza lover. </p>
 <p>Hacking my way through in DevOps+Operations Team since 2016.
 Specialties: AWS, Prometheus, Grafana, Cloud Foundry, Superset, Automated CI/CD, Gitlab, Docker, PostgreSQL
@@ -182,4 +181,22 @@ In the team, I'm in-charge of bringing in cutting edge tech and innovative solut
     }
 
     toggleSwitch.addEventListener('change', switchTheme, false);
-</script>
+</script> -->
+
+<!doctype html>
+
+<html>
+  <head>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+  </head>
+
+  <body>
+    <zero-md id="mymd" src="INDEX.md"></zero-md>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+    function myFunction() {
+      document.getElementById("mymd").src = "1993-05-15-off-to-download-linux.md";
+    }
+    </script>    
+  </body>
+</html>
