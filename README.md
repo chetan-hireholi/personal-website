@@ -1,2 +1,2 @@
 # chetanhireholi.me
-A tiny footprint in the WWW
+A tiny footprint in the www
