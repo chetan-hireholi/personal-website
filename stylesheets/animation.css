@@ -1,54 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono&display=swap');
+	*{
+		margin: 0;
+	}
+	body{
+    padding: 50px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    /* box-shadow: inset -53px -41px 198px #379E99, inset 95px -2px 200px #379e99; */
+    display:flex;
+    /* align-items:center; */
+    height:auto;
+    justify-content: center;
+	}
+	.typewriter {
+		font-family: 'Anonymous Pro', monospace;
+		width: 90%;  
+	}
+	h1 {
+	  overflow: hidden;
+	  margin: 0 auto;
+	  display: inline-block;
+	  font-weight: normal;
+	}
+	h1:after{
+	 content: '';
+	  display: inline-block;
+	  background-color: rgb(73, 255, 1);
+	  margin-left: 5px;
+	  height: 25px;
+    width: 10px;
+		animation: cursor 0.4s infinite;
+	}
 
-[data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab;
-}
-
-body{
-  padding: 50px;
-  background-color: var(--bg-color);
-  color: var(--font-color);
-  margin: 0 auto;
-}
-
-#parent {
-  height: 50px;
-  white-space: nowrap;
-  overflow: hidden; 
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 34px;
-  color: rgb(0, 0, 0);
-  position: relative;
-}
-
-#border {
-  border-bottom: solid 3px rgba(0,255,0,.75);
-  position: absolute;
-  right: -7px;
-  width: 20px;
-}
-
-/* Animation */
-#parent {
-  animation: animated-text 1.5s steps(30,end) 1s 1 normal both
-}
-
-#border {
-   animation: animated-cursor 800ms steps(30,end) infinite;
-}
-
-/* text animation */
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 450px;}
-}
-
-/* cursor animations */
-@keyframes animated-cursor{
-  from{border-bottom-color: rgba(0,255,0,.75);}
-  to{border-bottom-color: transparent;}
-}
+	/* The typewriter cursor effect */
+	@keyframes cursor {
+		0% { opacity: 1; }
+		49% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 0; }
+	}
