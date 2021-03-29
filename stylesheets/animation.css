@@ -44,7 +44,7 @@ body{
 /* text animation */
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 500px;}
+  to{width: 505px;}
 }
 
 /* cursor animations */
