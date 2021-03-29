@@ -1,47 +1,42 @@
-body {
-    background-color:#333;
-  }
-  
-  .output {
-    text-align:center;
-    font-family: 'Source Code Pro', monospace;
-    color:white;
-    h1 {
-      font-size:30px;
-    }
-  }
-  
-  /* Cursor Styling */
-  
-  .cursor::after {
-    content:'';
-    display:inline-block;
-    margin-left:3px;
-    background-color:white;
-    animation-name:blink;
-    animation-duration:0.5s;
-    animation-iteration-count: infinite;
-  }
-  h1.cursor::after {
-    height:24px;
-    width:13px;
-  }
-  p.cursor::after {
-    height:13px;
-    width:6px;
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity:1;
-    }
-    49% {
-      opacity:1;
-    }
-    50% {
-      opacity:0;
-    }
-    100% {
-      opacity:0;
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono&display=swap');
+	*{
+		margin: 0;
+	}
+	body{
+    padding: 50px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    /* box-shadow: inset -53px -41px 198px #379E99, inset 95px -2px 200px #379e99; */
+    display:flex;
+    /* align-items:center; */
+    height:100vh;
+    justify-content: center;
+	}
+	.typewriter {
+		font-family: 'Anonymous Pro', monospace;
+		width: 70%;  
+	}
+	h1 {
+	  overflow: hidden;
+	  margin: 0 auto;
+	  display: inline-block;
+	  font-weight: normal;
+	}
+	h1:after{
+	 content: '';
+	  display: inline-block;
+	  background-color: rgb(73, 255, 1);
+	  margin-left: 5px;
+	  height: 25px;
+    width: 10px;
+		animation: cursor 0.4s infinite;
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes cursor {
+		0% { opacity: 1; }
+		49% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 0; }
+	}

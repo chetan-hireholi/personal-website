@@ -1,12 +1,27 @@
 <head>
-    <script type = "text/javascript" src="ani.js"></script>
-    <link rel="stylesheet" href="ani.css"></link>
+    <!-- <script type="text/javascript" src="ani.js"></script> -->
+    <link rel="stylesheet" href="ani.css">
+    </link>
 </head>
+
 <body>
-    <div class="container py-5">
-        <div class="output" id="output">
-            <h1 class="cursor"></h1>
-            <p></p>
-        </div>
+    <div class="typewriter">
+        <h1 id="text">Hi! I'm Chetan Hireholi</h1>
     </div>
+    <script>
+        var i = 0;
+        var tag = document.getElementById("text");
+        var html = document.getElementById("text").innerHTML;
+        var attr = tag.setAttribute("data", html);
+        var txt = tag.getAttribute("data");
+        var speed = 100;
+        function typeWriter() {
+            if (i <= txt.length) {
+                document.getElementById("text").innerHTML = txt.slice(0, i + 1);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+    </script>
 </body>
