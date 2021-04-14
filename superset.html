@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Chetan Hireholi</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+  <!-- Load the element definition -->
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+  </style>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="index.html">Works</a></li>
+            <!-- <li><a href="contact.html">Contact</a></li> -->
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <span class="bi text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>"You miss 100% of the shots you don’t take. – Wayne Gretzky" - Micheal Scott<br></em></p>
+            </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Contact Me</h3>
+          <p><a href="mailto: chetan.hireholi@gmail.com">chetan.hireholi@gmail.com</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">👨‍💻 📸 🐕 🎮 🍕</a>
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <h2>Using Apache Superset to display & monitor Key Performance Indicators</h2>
+            <br>
+            <span class="superset">
+              To any Operations Team, Key Performance Indicators (KPIs) play an essential role in keeping the
+              applications running and stakeholders happy.
+            </span>
+            <span class="superset">
+              <p>There were a lot of metrics and reports which flow along timely-mails and in-house dashboards. But what
+                was really lacking is: ‘Intelligence’. We needed to empower and enable the user view these reports to
+                predict, analyze trends and draw conclusions. We came across a rich open source tool from Apache:
+                Superset. It still being in its incubating phase, it does offer a solution to what we were looking at.
+                For
+                folks looking a dockerized version, it is available too.</p>
+              <p>We then started evaluating on how well we can fit in Superset to our day-to-day operational activities.
+              </p>
+              <br>
+              <center>
+                <h4>Activity 1: A Cost Analysis solution (Infrastructure Cost dashboard)</h4>
+                <br>
+                <iframe src="https://giphy.com/embed/MXXcdnlriAIP618Xdr" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/abcnetwork-shark-tank-cost-how-low-MXXcdnlriAIP618Xdr">via GIPHY</a></p>
+              </center>
+
+              <br>
+              <p>To keep our budgets in check, we hosted a Superset dashboard which displayed our cost consumption for
+                our
+                infrastructure. We rely on AWS indirectly. Meaning, we get our AWS components provisioned by Philips
+                HealthSuite Digital Platform (HSDP). From HSDP’s bill, we configured the dashboard categorizing it into:
+                Overall summary, EC2, S3, RDS & Cloud foundry runtime.</p>
+              <h5>Result? We have now made static numbers speak more. Our management now not only get a high level view
+                on
+                the billing summary, but also the cost consumed by a single Project ‘per’ Environment ‘per’ AWS
+                component.
+              </h5>
+              <br>
+              <center>
+                <h4>Activity 2: Monitoring Dashboards (E2E device monitoring)</h4>
+                <br>
+                <iframe src="https://giphy.com/embed/VDTGsgOWg1Lu8ipeqM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/stickergiant-investigating-looking-for-it-into-VDTGsgOWg1Lu8ipeqM">via GIPHY</a></p>
+              </center>
+              <br>
+              <p>
+                Operations Team is responsible to combat any downtime or bottlenecks in the platform/infrastructure
+                end-to-end. By not investing much time to build a customized in-house dashboard tool, we were able
+                construct
+                complex queries and embed them in Superset instead. With Redis integrated into Superset, caching was
+                also
+                taken care, which did not burden the database engine. So now, we have production ready dashboards used
+                to
+                monitor bottlenecks in our infrastructures. Superset was also able to nicely fit in Single-Sign-On. This
+                enabled us to onboard federated users.</p>
+              <br>
+              <p>These were just few scenarios where we have used Superset.</p>
+              <h5>Conclusion: Superset can be a better alternative to any licensed business intelligence tool on a small
+                scale. Note that this tools fits our use case, it may vary for others. I would suggest people to have
+                the security officer check this before your introduce this tool in your organization.</h5>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Copyright Chetan Hireholi 2021. All Rights Reserved</p>
+          <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="https://twitter.com/chetan_hireholi" target="_blank"><span class="bi bi-twitter"></span></a>
+          <a href="https://www.instagram.com/tranquilhuman/" target="_blank"><span class="bi bi-instagram"></span></a>
+          <a href="https://www.linkedin.com/in/chetanhireholi/" target="_blank"><span class="bi bi-linkedin"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
