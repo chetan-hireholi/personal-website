@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono&display=swap');
+	*{
+		margin: 0;
+	}
+	body{
+    padding: 50px;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    /* box-shadow: inset -53px -41px 198px #379E99, inset 95px -2px 200px #379e99; */
+    display:flex;
+    /* align-items:center; */
+    height:auto;
+    justify-content: center;
+	}
+	.typewriter {
+		font-family: 'Anonymous Pro', monospace;
+		width: 90%;  
+	}
+	h1 {
+	  overflow: hidden;
+	  margin: 0 auto;
+	  display: inline-block;
+	  font-weight: normal;
+	}
+	h1:after{
+	 content: '';
+	  display: inline-block;
+	  background-color: rgb(73, 255, 1);
+	  margin-left: 7px;
+	  height: 35px;
+    width: 10px;
+		animation: cursor 0.75s infinite;
+	}
+
+	/* The typewriter cursor effect */
+	@keyframes cursor {
+		0% { opacity: 1; }
+		49% { opacity: 1; }
+		50% { opacity: 0; }
+		100% { opacity: 0; }
+	}
