@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 :root {
     --primary-color: #302AE6;
     --secondary-color: #536390;
     --font-color: #424242;
-    --bg-color: #f7f7f7d3;
+    --bg-color: #d1f4ffd3;
     --heading-color: #292922;
 }
 
@@ -18,7 +18,7 @@
 
 
 body {
-    font-family: "Helvetica Neue", Helvetica;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--font-color);
     max-width: 90%;
@@ -27,20 +27,19 @@ body {
 
 h1 {
     color: var(--heading-color);
-    font-family: 'Roboto Mono', monospace;
-    font-size: 2.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 4.25rem;
     margin-bottom: 1vh;
 }
 
 h3 {
-    /* font-family: 'Inconsolata', monospace; */
     font-weight:500;
 }
 
 p {
     
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
 }
 
 a {
